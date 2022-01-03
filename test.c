@@ -106,7 +106,7 @@ void draw() {
 	int gotoPos[2]={gotoColumn,gotoRow};
 	SDL_FillRect(screen, NULL, SDL_MapRGB(screen->format, 255, 255, 200));
 	nSDL_DrawString(screen, tinyfont, width-60, height-10, "BlendyDev");
-	nSDL_DrawString(screen, tinyfont, 10, height-10, itoa(isLegalMove(board, selectedSquare, gotoPos, turn), a, 10));//anton desinstala el LoL
+	nSDL_DrawString(screen, tinyfont, 10, height-10, itoa(isLegalMove(board, selectedSquare, gotoPos, turn), a, 10));
 	nSDL_DrawString(screen, tinyfont, 10, height-30, itoa(returncheckvalue(board, selectedSquare, gotoPos, turn), a, 10));
 	SDL_Rect border = {65, 7, 210, 210};
 	SDL_FillRect(screen, &border, SDL_MapRGB(screen->format, 80, 40, 20));
@@ -175,7 +175,7 @@ void draw() {
 				default:
 				break;
 			}
-			//debug texy
+			//debug text
 			
 			nSDL_DrawString(screen, tinyfont, piece.x, piece.y, itoa(getBoardAfterMove(board, selectedSquare, gotoPos, turn, i, k), a, 10));
 			
